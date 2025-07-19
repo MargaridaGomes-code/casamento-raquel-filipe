@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4a79c5">
+    <meta name="description" content="Partilhe suas fotos do casamento de Raquel e Filipe e do batizado da Caetana">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Raquel & Filipe - Memórias Especiais</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+    <div class="wave-container">
+        <div class="header-decoration left"></div>
+        <div class="header-decoration right"></div>
+        <header>
+            <div class="header-content">
+                <h1>Filipe & Raquel</h1>
+                <p>Partilhe suas fotos do nosso casamento e do batizado da Caetana</p>
+            </div>
+            <nav>
+                <a href="#home" class="active">Início</a>
+                <a href="#upload">Partilhar Fotos</a>
+                <a href="#info">Informações</a>
+                <a href="#about">Sobre</a>
+            </nav>
+        </header>
+        <div class="wave"></div>
+    </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="card">
+                <h2>Bem-vindos ao nosso álbum digital!</h2>
+                <p>Obrigado por fazer parte destes momentos tão especiais nas nossas vidas. Gostaríamos de convidá-lo a partilhar as suas fotos do nosso casamento e do batizado da Caetana para criarmos um álbum de recordações.</p>
+                <div class="privacy-notice">
+                    <i class="fas fa-lock"></i>
+                    <p>Todas as fotos enviadas serão visíveis apenas para os noivos. A sua privacidade é importante para nós!</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#upload" class="btn primary-btn"><i class="fas fa-cloud-upload-alt"></i> Partilhar Fotos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="upload" class="upload-section">
+            <div class="card">
+                <h2>Partilhe suas fotos conosco</h2>
+                <p>Escolha as fotos que deseja partilhar do nosso casamento e do batizado da Caetana. Apenas nós teremos acesso às imagens enviadas.</p>
+                
+                <!-- Upload via Dropbox File Request -->
+                <div class="dropbox-upload-container" style="text-align:center;">
+                    <a href="https://www.dropbox.com/request/Vs8PJP3hTIufJrgx1MGi" target="_blank" class="btn primary-btn" style="display:inline-block;margin:20px 0;">
+                        <i class="fas fa-paper-plane"></i> Enviar Fotos via Dropbox
+                    </a>
+                    <div class="instruction-note">
+                        <p><i class="fas fa-info-circle"></i> Para partilhar as tuas fotos:<br>
+                        1. Clica no botão acima.<br>
+                        2. Seleciona as fotos que queres enviar.<br>
+                        3. Clica em "Carregar".<br>
+                        As fotos vão diretamente para a nossa Dropbox e só nós teremos acesso!</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="info" class="info-section">
+            <div class="card">
+                <h2>Informações sobre as fotos</h2>
+                <div class="info-content">
+                    <div class="info-item">
+                        <i class="fas fa-lock"></i>
+                        <h3>Privacidade</h3>
+                        <p>Todas as fotos enviadas são privadas e apenas nós (Raquel e Filipe) teremos acesso a elas.</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-camera"></i>
+                        <h3>Tipos de fotos</h3>
+                        <p>Pode enviar fotos do casamento, do batizado, ou de ambos os eventos.</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Álbum Final</h3>
+                        <p>Mais tarde, partilharemos um álbum selecionado com todos os convidados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="card">
+                <h2>Sobre o Nosso Dia Especial</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Casamento & Batizado</h3>
+                        <p>No dia 26 de março, celebramos o nosso amor e batizamos a nossa querida Caetana. Foi um dia repleto de emoções, sorrisos e momentos inesquecíveis que ficarão para sempre em nossos corações.</p>
+                        <p>Agradecemos a presença de todos que compartilharam conosco estes momentos tão especiais. Suas fotos ajudarão a preservar as memórias deste dia incrível.</p>
+                        <h3>Como usar este site?</h3>
+                        <p>É simples! Acesse a seção "Partilhar Fotos" e faça o upload das suas imagens. Todas as fotos serão enviadas diretamente para nós.</p>
+                        <p>Mais tarde, selecionaremos as melhores fotos e criaremos um álbum para compartilhar com todos os convidados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Com amor, Raquel & Filipe | <span id="currentYear"></span></p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html> 
