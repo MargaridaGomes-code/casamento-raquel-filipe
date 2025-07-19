@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload de Fotos - Raquel & Filipe</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f7fa; padding: 40px; }
+        .container { max-width: 400px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px #ccc; }
+        h2 { text-align: center; color: #4a79c5; }
+        .status { margin-top: 20px; text-align: center; }
+        .btn { background: #4a79c5; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .btn:disabled { background: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enviar Fotos</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" accept="image/*" required multiple><br><br>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+        <div class="status" id="status"></div>
+    </div>
+    <script>
+        const form = document.getElementById('uploadForm');
+        const statusDiv = document.getElementById('status');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const files = document.getElementById('fileInput').files;
+            if (!files.length) return;
+            statusDiv.textContent = 'A enviar...';
+            for (let i = 0; i < files.length; i++) {
+                const formData = new FormData();
+                formData.append('file', files[i]);
+                try {
+                    const res = await fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                        statusDiv.innerHTML += `<div>✅ ${files[i].name} enviado!</div>`;
+                    } else {
+                        statusDiv.innerHTML += `<div>❌ ${files[i].name} falhou: ${data.error}</div>`;
+                    }
+                } catch (err) {
+                    statusDiv.innerHTML += `<div>❌ ${files[i].name} falhou: Erro de rede</div>`;
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,95 @@
+INSTRUÇÕES PARA COMPLETAR O WEBSITE
+
+Para completar o website para ser compartilhado via QR Code e permitir o upload de fotos para o Google Drive APENAS visíveis para você, siga as instruções abaixo:
+
+1. Configurar o Formulário do Google:
+   - Acesse o Google Forms (forms.google.com) e faça login na sua conta Google
+   - Crie um novo formulário clicando em "+ Novo formulário"
+   - Configure o título como "Fotos do Casamento de Raquel e Filipe"
+   - Adicione uma descrição explicando o propósito do formulário
+   - Adicione um campo para o nome do convidado (texto curto)
+   - Adicione um campo para upload de arquivos:
+     * Clique no ícone "+" e selecione "Upload de arquivos"
+     * Configure para permitir múltiplos arquivos (até 10 por envio)
+     * Defina os tipos de arquivo permitidos para imagens apenas
+     * Defina o tamanho máximo de arquivo (recomendado: 1GB total)
+   - Configure o destino dos arquivos:
+     * Clique em "Configurações" (ícone de engrenagem)
+     * Na aba "Respostas", selecione "Coletar endereços de e-mail" (opcional)
+     * Na seção de upload de arquivos, selecione a pasta do Google Drive onde as fotos serão salvas
+   - Clique em "Enviar" e copie o link do formulário
+
+2. Configurações de Privacidade no Google Drive:
+   - Na sua conta do Google Drive, crie uma pasta para armazenar as fotos enviadas
+   - Configure as permissões da pasta como "Privado" (apenas você pode ver)
+   - Esta pasta será usada como destino para os uploads feitos através do formulário
+   - Não compartilhe esta pasta com ninguém para garantir que apenas você tenha acesso às fotos
+
+3. Integrar o Formulário ao Website:
+   - Abra o arquivo index.html
+   - Localize a tag iframe na seção de upload:
+     ```html
+     <iframe src="LINK_DO_SEU_FORMULÁRIO_GOOGLE" ...
+     ```
+   - Substitua "LINK_DO_SEU_FORMULÁRIO_GOOGLE" pelo link do formulário que você copiou
+
+4. Decorações Florais:
+   - Salve a imagem das rosas azuis em aquarela como:
+     * images/blue-roses.png - imagem que será usada para as decorações no cabeçalho
+   
+   Certifique-se de que a imagem tenha fundo transparente (PNG) para uma integração perfeita com o design.
+
+5. Ícones para PWA (Progressive Web App):
+   - Crie ícones para permitir a instalação como aplicativo:
+     * images/favicon.ico - ícone para a guia do navegador
+     * images/apple-touch-icon.png - ícone para dispositivos Apple (180x180px)
+     * images/icon-192x192.png - ícone para dispositivos Android (192x192px)
+     * images/icon-512x512.png - ícone para splash screen (512x512px)
+   
+   Uma versão das rosas azuis pode ser usada como base para os ícones.
+
+6. Criar Imagem de Onda:
+   - Crie um arquivo SVG simples para o efeito de onda na parte inferior do cabeçalho:
+     * images/wave.svg
+
+7. Hospedagem:
+   - O site deve ser hospedado em um servidor com HTTPS para funcionar como PWA
+   - Recomendamos o uso de serviços como Netlify, Vercel ou GitHub Pages que oferecem HTTPS gratuito
+
+8. QR Code:
+   - Após hospedar o site, gere um QR code para o URL do site
+   - Use sites como qr-code-generator.com ou o serviço do Google Charts:
+     https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=URL_DO_SEU_SITE_AQUI
+   - Imprima o QR code para compartilhar com os convidados (tamanho recomendado: 5x5cm)
+
+VANTAGENS DESTA SOLUÇÃO COM PRIVACIDADE:
+1. Todas as fotos são enviadas diretamente para o SEU Google Drive, sem acesso público
+2. Os convidados podem enviar várias fotos de uma vez
+3. Apenas você terá acesso às fotos enviadas pelos convidados
+4. Os convidados não podem ver as fotos uns dos outros
+5. Você mantém controle total sobre as imagens recebidas
+6. Mais tarde, você pode selecionar e compartilhar apenas as melhores fotos com os convidados
+7. Não há necessidade de implementar um backend complexo
+
+ORGANIZAÇÃO DAS FOTOS:
+- O Google Forms automaticamente organiza os uploads por data e respondente
+- Você receberá notificações por email quando novos envios forem feitos (se configurado)
+- As fotos podem ser visualizadas diretamente no Drive ou na planilha de respostas do formulário
+- Cada envio incluirá o nome do convidado junto com suas fotos
+- A pasta do Drive funcionará como seu repositório privado de todas as fotos do evento
+
+COMPARTILHAMENTO FUTURO (OPCIONAL):
+- Depois do evento, você pode criar um álbum com fotos selecionadas no Google Fotos
+- Compartilhe este álbum com todos os convidados através de um link
+- Desta forma, você controla quais fotos serão compartilhadas publicamente
+- Os convidados terão acesso apenas às fotos que você escolher compartilhar
+
+RECURSOS PARA DISPOSITIVOS MÓVEIS:
+O website foi otimizado para funcionar bem em dispositivos móveis com:
+
+1. Design responsivo para diferentes tamanhos de tela
+2. Suporte a instalação como aplicativo nativo (PWA)
+3. Funcionamento offline para visualizar o site (não as fotos)
+4. Interface adaptada para facilitar o uso em telas pequenas
+
+Para testar o website localmente, basta abrir o arquivo index.html em qualquer navegador moderno. Para aproveitar os recursos de PWA, é necessário hospedar o site em um servidor com HTTPS. 
